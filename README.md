@@ -1,5 +1,5 @@
 # SoundcloudViews
 
-Simple View Automation, Chromium Embedded with CefSharp, MahApps.Metro
+Simple View Automation for websites (traffic bot) - Chromium Embedded with CefSharp and MahApps.Metro.
 
-Windows 10 WPF
+Requirements: Windows 10 |  .NET Framework 4.6.2 | Google Chrome
