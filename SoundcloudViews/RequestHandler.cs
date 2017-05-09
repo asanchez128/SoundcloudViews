@@ -84,7 +84,7 @@ namespace SoundcloudViews
             var headers = request.Headers;
 
             var userAgent = headers["User-Agent"];
-            headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/55.0" + " FeuerFuchs " + RandomString(5);
+            headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/" + RandomString(5);
 
             request.Headers = headers;
 

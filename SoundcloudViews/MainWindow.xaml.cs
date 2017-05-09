@@ -211,7 +211,6 @@ namespace SoundcloudViews
             }
         }
 
-  
         private void genPlaysCancel_Click(object sender, RoutedEventArgs e)
         {
             tokenSource.Cancel(true);
@@ -226,7 +225,7 @@ namespace SoundcloudViews
                 var rc = Browser.GetBrowser().GetHost().RequestContext;
                 var v = new Dictionary<string, object>();
                 v["mode"] = "fixed_servers";
-                v["server"] = "" + currentproxyaddress;
+                v["server"] = currentproxyaddress;
                 string error;
                 bool success = rc.SetPreference("proxy", v, out error);
                 rc.GetAllPreferences(true);
