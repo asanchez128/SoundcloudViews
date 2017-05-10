@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:SoundcloudViews"
         xmlns:ControlzEx="clr-namespace:ControlzEx;assembly=MahApps.Metro" x:Class="SoundcloudViews.MainWindow"
         mc:Ignorable="d"
-        Icon="scm_8bit.ico"
+        Icon="scm.ico"
         BorderThickness="0" 
         ResizeMode="NoResize"
         WindowTransitionsEnabled="True"
@@ -17,7 +17,7 @@
         ShowIconOnTitleBar="True"
         ShowTitleBar="false"
         RenderOptions.ClearTypeHint="Enabled"
-        TextOptions.TextFormattingMode="Display" IconEdgeMode="Aliased" IconBitmapScalingMode="Fant" IconOverlayBehavior="Flyouts" WindowStyle="ToolWindow" HorizontalAlignment="Center" Width="1200" Height="655" >
+        TextOptions.TextFormattingMode="Display" IconEdgeMode="Aliased" IconBitmapScalingMode="Fant" IconOverlayBehavior="Flyouts" WindowStyle="ToolWindow" Width="1200" Height="655" HorizontalAlignment="Center" >
 
     <Grid x:Name="SoundcloudViews" UseLayoutRounding="True" Background="#FF333333">
 
