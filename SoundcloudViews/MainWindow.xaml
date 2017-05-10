@@ -19,7 +19,7 @@
         RenderOptions.ClearTypeHint="Enabled"
         TextOptions.TextFormattingMode="Display" IconEdgeMode="Aliased" IconBitmapScalingMode="Fant" IconOverlayBehavior="Flyouts" WindowStyle="ToolWindow" HorizontalAlignment="Center" Width="1200" Height="655" >
 
-    <Grid x:Name="SoundcloudViews" UseLayoutRounding="True">
+    <Grid x:Name="SoundcloudViews" UseLayoutRounding="True" Background="#FF333333">
 
         
         
