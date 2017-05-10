@@ -33,8 +33,8 @@
         ControlzEx:KeyboardNavigationEx.AlwaysShowFocusVisual="True" 
         HorizontalContentAlignment="Stretch" d:IsHidden="True" />
         <DockPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,5">
-            
-            <Button x:Name="SoundcloudViewsTK" Focusable="False" Height="60" Width="60" Padding="0" Click="goHome">
+
+            <Button x:Name="SoundcloudViewsTK" Focusable="False" Height="54" Width="54" Padding="0" Click="goHome" BorderThickness="2" BorderBrush="White" Style="{DynamicResource MetroCircleButtonStyle}" >
             <Image x:Name="moreSoundcloudViews" Height="50" Width="50" Source="data/scm_8bit.png" Cursor="Arrow" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="UniformToFill" Tag="soundcloud-views.tk"/>
             </Button>
             

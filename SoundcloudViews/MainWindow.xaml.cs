@@ -34,6 +34,8 @@ namespace SoundcloudViews
         //Default Browser URL
         string defaultSongUrl = "https://soundcloud-views.tk";
 
+        bool isStartPage = true;
+
         //Async Task Cancellation
         CancellationTokenSource tokenSource = new CancellationTokenSource();
 
@@ -146,15 +148,18 @@ namespace SoundcloudViews
             //Mainframe finished loading
             Browser.FrameLoadEnd += (sender, args) =>
             {
-                //Wait for the MainFrame to finish loading
-                if (args.Frame.IsMain)
-                {
-                    //args.Frame.ExecuteJavaScriptAsync("alert('MainFrame finished loading');");
-                    
-                    Trace.WriteLine("►►► MAINFRAME LOADED ◄◄◄");
 
-                    closeCookie();
-                }
+                    //Wait for the MainFrame to finish loading
+                    if (args.Frame.IsMain)
+                    {
+                        if(isStartPage == true)
+                        args.Frame.ExecuteJavaScriptAsync("document.body.style.overflow = 'hidden'");
+
+                        Trace.WriteLine("►►► MAINFRAME LOADED ◄◄◄");
+
+                        closeCookie();
+                    }
+                
             };
 
             Count.Content = automatedPlays;
@@ -223,6 +228,7 @@ namespace SoundcloudViews
         private void loadSongUrl()
         {
             currentproxyaddress = "direct://";
+            isStartPage = false;
 
             Cef.UIThreadTaskFactory.StartNew(delegate
             {
