@@ -46,11 +46,12 @@ namespace SoundcloudViews
         int automatedPlays = 0;
         int maxPlaysNumber = 500;
 
-        //Address for the current Proxy :D
-        string currentproxyaddress;
-
         //Cookie Disclaimer clickEvent
         bool firstStart = true;
+
+        //Proxy Management
+        string currentproxyaddress;
+        string currentportaddress;
 
         #region //DOM LOADED
         public class RenderProcessMessageHandler : IRenderProcessMessageHandler
@@ -169,7 +170,7 @@ namespace SoundcloudViews
         }
         #endregion
 
-        #region //Play generation
+        #region //Play generation WTF!!!!!!!!!!!!!!
         private async void genPlaysButton_Click(object sender, RoutedEventArgs e)
         {
             //Dispose the Cancellation Token and Start again
@@ -181,8 +182,8 @@ namespace SoundcloudViews
 
         async Task PutTaskDelay()
         {
-            maxPlaysNumber = 500;
-            int timebetweenPlays = 36000;
+            maxPlaysNumber = 5000;
+            int timebetweenPlays = 1000;
 
             try
             {
@@ -228,6 +229,7 @@ namespace SoundcloudViews
         private void loadSongUrl()
         {
             currentproxyaddress = "direct://";
+
             isStartPage = false;
 
             Cef.UIThreadTaskFactory.StartNew(delegate
@@ -235,7 +237,7 @@ namespace SoundcloudViews
                 var rc = Browser.GetBrowser().GetHost().RequestContext;
                 var v = new Dictionary<string, object>();
                 v["mode"] = "fixed_servers";
-                v["server"] = currentproxyaddress;
+                v["server"] = currentproxyaddress + ":" + currentportaddress; 
                 string error;
                 bool success = rc.SetPreference("proxy", v, out error);
                 rc.GetAllPreferences(true);
