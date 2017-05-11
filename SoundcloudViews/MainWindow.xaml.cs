@@ -170,7 +170,7 @@ namespace SoundcloudViews
         }
         #endregion
 
-        #region //Play generation WTF!!!!!!!!!!!!!!
+        #region //Play generation
         private async void genPlaysButton_Click(object sender, RoutedEventArgs e)
         {
             //Dispose the Cancellation Token and Start again
