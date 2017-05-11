@@ -182,8 +182,8 @@ namespace SoundcloudViews
 
         async Task PutTaskDelay()
         {
-            maxPlaysNumber = 5000;
-            int timebetweenPlays = 1000;
+            maxPlaysNumber = 500;
+            int timebetweenPlays = 33000;
 
             try
             {
@@ -237,7 +237,7 @@ namespace SoundcloudViews
                 var rc = Browser.GetBrowser().GetHost().RequestContext;
                 var v = new Dictionary<string, object>();
                 v["mode"] = "fixed_servers";
-                v["server"] = currentproxyaddress + ":" + currentportaddress; 
+                v["server"] = currentproxyaddress; //+ ":" + currentportaddress; 
                 string error;
                 bool success = rc.SetPreference("proxy", v, out error);
                 rc.GetAllPreferences(true);
