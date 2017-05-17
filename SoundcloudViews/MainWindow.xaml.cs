@@ -1,29 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using CefSharp;
 using MahApps.Metro.Controls;
 using System.Threading;
 using System.Diagnostics;
 using System.IO;
-using System.Data;
-using CefSharp.Wpf;
 
 namespace SoundcloudViews
 {
     /// <summary>
-    /// Fooooooock Soundcloud Views made easy...
+    /// Soundcloud Views made easy...
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
@@ -51,7 +41,7 @@ namespace SoundcloudViews
 
         //Proxy Management
         string currentproxyaddress;
-        string currentportaddress;
+        //string currentportaddress;
 
         #region //DOM LOADED
         public class RenderProcessMessageHandler : IRenderProcessMessageHandler
@@ -81,6 +71,9 @@ namespace SoundcloudViews
         #endregion
 
         #region //Initialize Browser
+        /// <summary>
+        /// Cef Settings
+        /// </summary>
         public static void startBrowser()
         {
             //Cef.RegisterWidevineCdm(@".\WidevineCdm");
