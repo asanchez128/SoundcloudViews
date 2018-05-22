@@ -22,7 +22,7 @@ namespace SoundcloudViews
         private RequestHandler requestHandler;
 
         //Default Browser URL
-        string defaultSongUrl = "https://soundcloud-views.tk";
+        string defaultSongUrl = "https://soundcloud.com";
 
         bool isStartPage = true;
 
